@@ -143,12 +143,14 @@ setupOpenAPIDocumentation(app)
 // Provider-specific messages route requires authentication
 app.use('/:provider/v1/messages', authMiddleware, extendMessagesTimeout, messagesProviderRoutes)
 
+// MCP proxy route without auth (for Streamable HTTP MCP clients like Claude Code)
+app.use('/v1/mcps', mcpRoutes)
+
 // API v1 routes with auth
 const apiRouter = express.Router()
 apiRouter.use(authMiddleware)
 // Mount routes
 apiRouter.use('/chat', chatRoutes)
-apiRouter.use('/mcps', mcpRoutes)
 apiRouter.use('/messages', extendMessagesTimeout, messagesRoutes)
 apiRouter.use('/models', modelsRoutes)
 apiRouter.use('/agents', agentsRoutes)
