@@ -32,7 +32,7 @@ jobs:
   check-repository:
     runs-on: ubuntu-latest
     outputs:
-      should_run: ${{ github.repository == 'CherryHQ/cherry-studio' }}
+      should_run: 'true'
     steps:
       - name: Check if running in main repository
         run: |
@@ -53,7 +53,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v6
         with:
-          ref: main
+          ref: ${{ github.ref }}
 
       - name: Install Node.js
         uses: actions/setup-node@v6
