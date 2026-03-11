@@ -831,6 +831,7 @@ export const BuiltinMCPServerNames = {
   fetch: '@cherry/fetch',
   filesystem: '@cherry/filesystem',
   difyKnowledge: '@cherry/dify-knowledge',
+  knowledge: '@cherry/knowledge',
   python: '@cherry/python',
   didiMCP: '@cherry/didi-mcp',
   browser: '@cherry/browser',

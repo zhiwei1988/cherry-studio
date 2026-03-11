@@ -10,6 +10,7 @@ import DifyKnowledgeServer from './dify-knowledge'
 import FetchServer from './fetch'
 import FileSystemServer from './filesystem'
 import HubServer from './hub'
+import KnowledgeServer from './knowledge'
 import MemoryServer from './memory'
 import PythonServer from './python'
 import ThinkingServer from './sequentialthinking'
@@ -42,6 +43,9 @@ export function createInMemoryMCPServer(
     case BuiltinMCPServerNames.difyKnowledge: {
       const difyKey = envs.DIFY_KEY
       return new DifyKnowledgeServer(difyKey, args).server
+    }
+    case BuiltinMCPServerNames.knowledge: {
+      return new KnowledgeServer().server
     }
     case BuiltinMCPServerNames.python: {
       return new PythonServer().server

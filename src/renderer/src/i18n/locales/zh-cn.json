@@ -4367,6 +4367,7 @@
         "browser": "通过 Chrome DevTools 协议控制隐藏的 Electron 窗口，支持打开 URL、执行单行 JS、重置会话",
         "didi_mcp": "一个集成了滴滴 MCP 服务器实现，提供网约车服务包括地图搜索、价格预估、订单管理和司机跟踪。仅支持中国大陆地区。需要配置 DIDI_API_KEY 环境变量",
         "dify_knowledge": "Dify 的 MCP 服务器实现，提供了一个简单的 API 来与 Dify 进行交互。需要配置 Dify Key",
+        "knowledge": "通过 MCP 搜索 Cherry Studio 本地知识库，提供列出和查询向量数据库的工具。",
         "fetch": "用于获取 URL 网页内容的 MCP 服务器",
         "filesystem": "实现文件系统操作的模型上下文协议（MCP）的 Node.js 服务器。需要配置允许访问的目录",
         "mcp_auto_install": "自动安装 MCP 服务（测试版）",
